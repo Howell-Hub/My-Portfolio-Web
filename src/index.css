@@ -1,0 +1,202 @@
+@import "tailwindcss";
+
+/* Custom animations */
+@keyframes gradient-x {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation classes */
+.animate-gradient-x {
+  animation: gradient-x 3s ease infinite;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+.animate-fade-right {
+  animation: fade-right 0.6s ease-out forwards;
+}
+
+.animate-fade-left {
+  animation: fade-left 0.6s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.6s ease-out forwards;
+}
+
+/* Initial state for animated elements */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+[data-animate="fade-up"] {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+[data-animate="fade-right"] {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+[data-animate="fade-left"] {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+/* Visible state */
+[data-animate].animate-fade-up,
+[data-animate="fade-up"].animate-fade-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-animate].animate-fade-right,
+[data-animate="fade-right"].animate-fade-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+[data-animate].animate-fade-left,
+[data-animate="fade-left"].animate-fade-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #3b82f6, #6366f1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #2563eb, #4f46e5);
+}
+
+/* Button hover effects */
+.viewBtn {
+  transition: all 0.3s ease-in-out;
+}
+.viewBtn:hover {
+  transform: translateY(-1px) scale(1.05);
+ 
+}
+
+.getBtn {
+  transition: all 0.3s ease-in-out;
+}
+.getBtn:hover {
+  transform: translateY(-1px) scale(1.05);
+}
+.socialBtn {
+  transition: all 0.3s ease-in-out;
+}
+.socialBtn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.submitBtn {
+  transition: all 0.3s ease-in-out;
+}
+.submitBtn:hover {
+  transform: translateY(-2px) scale(1.05);
+}
+
+
+.socialsBtn {
+  transition: all 0.3s ease-in-out;
+}
+.socialsBtn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-btn {
+  transition: all 0.3s ease-in-out;
+}
+.project-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+}
