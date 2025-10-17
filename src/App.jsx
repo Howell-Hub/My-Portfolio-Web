@@ -357,7 +357,7 @@ const App = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">Backend</h3>
                 <ul className="space-y-3">
-                  {['Node.js', 'Express.js', 'MongoDB', 'MySQL', 'REST APIs'].map((skill, index) => (
+                  {['Node.js', 'Express.js', 'MongoDB', 'MySQL'].map((skill, index) => (
                     <li 
                       key={skill} 
                       className="flex items-center text-gray-600 hover:text-indigo-600 transition-colors duration-300"
